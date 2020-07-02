@@ -1,8 +1,8 @@
-FROM ubuntu:18.04
+FROM gitpod/workspace-full
 # Prerequisites
 RUN apt update && apt install -y curl git unzip xz-utils zip libglu1-mesa openjdk-8-jdk wget
 # Setup new user
-USER gitpod
+USER root
 WORKDIR /home/gitpod
 # Prepare Android directories and system variables
 RUN mkdir -p Android/Sdk
