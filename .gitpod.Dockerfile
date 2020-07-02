@@ -3,8 +3,8 @@ FROM ubuntu:18.04
 RUN apt update && apt install -y curl git unzip xz-utils zip libglu1-mesa openjdk-8-jdk wget
 # Setup new user
 RUN useradd -ms /bin/bash developer
-USER developer
-WORKDIR /home/developer
+USER gitpod
+WORKDIR /home/gitpod
 # Prepare Android directories and system variables
 RUN mkdir -p Android/Sdk
 ENV ANDROID_SDK_ROOT /home/developer/Android/Sdk
